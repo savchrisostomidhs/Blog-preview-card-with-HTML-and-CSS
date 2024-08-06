@@ -1,0 +1,125 @@
+@font-face {
+    font-family: Figtree;
+    src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Black: hsl(0, 0%, 7%);
+    --Grey: hsl(0, 0%, 50%);
+    --White: hsl(0, 0%, 100%);
+    --Yellow: hsl(47, 88%, 63%);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: var(--Yellow);
+    display: grid;
+    font-family: Figtree;
+    font-size: 16px;
+    place-items: center;
+}
+
+main {
+    background-color: var(--White);
+    border-radius: 15px;
+    border: 1px solid var(--Black);
+    box-shadow: 6px 6px;
+    display: flex;
+    flex-direction: column;
+    height: 520px;
+    padding: 23px;
+    transition: box-shadow 0.2s;
+    width: 382px;
+}
+
+main>img {
+    border-radius: 10px;
+    height: 200px;
+    width: 100%;
+}
+
+.Learning {
+    background-color: var(--Yellow);
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 24px;
+    padding: 6px;
+    text-align: center;
+    width: 80px;
+}
+
+.Learning+p {
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+h1 {
+    cursor: pointer;
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+h1+p {
+    color: var(--Grey);
+    line-height: 25px;
+    margin-top: 15px;
+}
+
+.avatar {
+    align-items: center;
+    display: flex;
+    justify-content: start;
+    margin-top: 15px;
+}
+
+.avatar img {
+    margin-right: 10px;
+    max-height: 30px;
+    max-width: 30px;
+}
+
+.avatar p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+h1:hover {
+    color: var(--Yellow);
+}
+
+main:hover {
+    box-shadow: 15px 15px;
+    transition: box-shadow 0.2s;
+}
+
+.attribution {
+    display: none;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 400px) {
+    main {
+        height: fit-content;
+        width: calc(100% - 50px);
+    }
+
+    .Learning {
+        width: fit-content;
+    }
+}
